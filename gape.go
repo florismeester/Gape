@@ -76,7 +76,7 @@ func main(){
 			log.Fatal("Not a directory: ", item)
 		}
 		// I might move the notification options to the config file
-		if err := notify.Watch(item, c, notify.Remove, notify.Create, notify.Write, notify.Rename ); err != nil {
+		if err := notify.Watch(item + "...", c, notify.Remove, notify.Create, notify.Write, notify.Rename ); err != nil {
     			log.Fatal(err)
 		}
 	}
